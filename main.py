@@ -8,19 +8,19 @@ BACKGROUND_COLOR = "#B1DDC6"
 window = Tk()
 window.title("Flash Card")
 window.config(bg=BACKGROUND_COLOR)
-window.minsize(width=800, height=600)
+window.minsize(width=600, height=600)
 
 canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR)
 card_image = PhotoImage(file="./images/card_front.png")
 canvas.create_image(400, 263, image=card_image)
-canvas.grid(row=0, column=1, pady=40, padx=50)
+canvas.grid(row=0, column=1, pady=40)
 
 button_image_1 = PhotoImage(file="./images/wrong.png")
 button = Button(image=button_image_1, highlightthickness=0)
 button.grid(row=1, column=0)
-#
-# button_image_2 = PhotoImage(file="./images/right.png")
-# button = Button(image=button_image_2, highlightthickness=0)
-# button.grid(row=1, column=1)
+
+button_image_2 = PhotoImage(file="./images/right.png")
+button = Button(image=button_image_2, highlightthickness=0)
+button.grid(row=1, column=2)
 
 window.mainloop()
