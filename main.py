@@ -8,7 +8,7 @@ BACKGROUND_COLOR = "#B1DDC6"
 window = Tk()
 window.title("Flash Card")
 window.config(bg=BACKGROUND_COLOR)
-window.minsize(width=600, height=600)
+window.minsize(width=600, height=700)
 
 canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR)
 card_image = PhotoImage(file="./images/card_front.png")
