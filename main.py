@@ -29,7 +29,7 @@ label_language.create_text(400, 153,text="Name", font=FONT)
 label_language.grid(row=0, column=1, columnspan=3)
 
 label_word = Canvas()
-label_word.create_text( text="Hello", font=FONT)
+label_word.create_text(400, 263, text="Hello", font=FONT)
 label_word.grid(row=0, column=1, columnspan=3)
 
 window.mainloop()
