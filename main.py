@@ -2,7 +2,7 @@ from tkinter import *
 
 BACKGROUND_COLOR = "#B1DDC6"
 WHITE_BACKGROUND = "#FFFFFF"
-FONT = ("Calibri", 25, "italic")
+FONT = ("Ariel", 30, "italic")
 # --------------------------------------UI----------------------------------
 
 
@@ -24,8 +24,8 @@ button_image_2 = PhotoImage(file="./images/right.png")
 button = Button(image=button_image_2, highlightthickness=0)
 button.grid(row=1, column=2, padx=50)
 
-label = Label()
-label.config(text="Name", font=FONT, bg= WHITE_BACKGROUND)
-label.grid(row=0, column=1, columnspan=3)
+label_language = Label()
+label_language.config(text="Name", font=FONT, bg= WHITE_BACKGROUND)
+label_language.grid(row=0, column=1, columnspan=3)
 
 window.mainloop()
