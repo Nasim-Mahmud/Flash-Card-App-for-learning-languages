@@ -2,7 +2,7 @@ from tkinter import *
 
 BACKGROUND_COLOR = "#B1DDC6"
 WHITE_BACKGROUND = "#FFFFFF"
-FONT = ("Calibri", 25, "normal")
+FONT = ("Calibri", 25, "italic")
 # --------------------------------------UI----------------------------------
 
 
