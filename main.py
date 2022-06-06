@@ -13,7 +13,7 @@ window.minsize(width=600, height=600)
 canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR)
 card_image = PhotoImage(file="./images/card_front.png")
 canvas.create_image(400, 263, image=card_image)
-canvas.grid(row=0, column=1,columnspan=3, pady=40, padx=50)
+canvas.grid(row=0, column=1,columnspan=3, pady=20, padx=50)
 
 button_image_1 = PhotoImage(file="./images/wrong.png")
 button = Button(image=button_image_1, highlightthickness=0)
