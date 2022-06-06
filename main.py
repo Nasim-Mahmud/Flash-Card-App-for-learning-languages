@@ -2,7 +2,8 @@ from tkinter import *
 
 BACKGROUND_COLOR = "#B1DDC6"
 WHITE_BACKGROUND = "#FFFFFF"
-FONT = ("Ariel", 30, "italic")
+LANG_FONT = ("Ariel", 30, "italic")
+WORD_FONT = ("Ariel", 50, "bold")
 # --------------------------------------UI----------------------------------
 
 
@@ -24,9 +25,9 @@ button_image_2 = PhotoImage(file="./images/right.png")
 button = Button(image=button_image_2, highlightthickness=0)
 button.grid(row=1, column=2, padx=50)
 
-label_language = Canvas(height=526, width=800, background=WHITE_BACKGROUND)
-label_language.create_text(400, 153,text="Name", font=FONT)
-label_language.create_text(400, 263,text="Name", font=FONT)
+label_language = Canvas(height=400, width=600, background=WHITE_BACKGROUND)
+label_language.create_text(300, 103,text="Name", font=LANG_FONT)
+label_language.create_text(300, 203,text="Name", font=WORD_FONT)
 label_language.grid(row=0, column=1, columnspan=3)
 
 # label_word = Canvas()
