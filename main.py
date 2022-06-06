@@ -25,8 +25,8 @@ button_image_2 = PhotoImage(file="./images/right.png")
 button = Button(image=button_image_2, highlightthickness=0)
 button.grid(row=1, column=2, padx=50)
 
-label_language = Canvas(height=400, width=600, background=WHITE_BACKGROUND)
-label_language.create_text(300, 103,text="Name", font=LANG_FONT)
+label_language = Canvas(height=400, width=600, background=WHITE_BACKGROUND, highlightthickness=0)
+label_language.create_text(300, 103,text="Name", font=LANG_FONT, )
 label_language.create_text(300, 203,text="Name", font=WORD_FONT)
 label_language.grid(row=0, column=1, columnspan=3)
 
