@@ -24,12 +24,12 @@ button_image_2 = PhotoImage(file="./images/right.png")
 button = Button(image=button_image_2, highlightthickness=0)
 button.grid(row=1, column=2, padx=50)
 
-label_language = Canvas()
-label_language.create_text(200, 150,text="Name", font=FONT, bg= WHITE_BACKGROUND)
+label_language = Canvas(height=526, width=800, background=WHITE_BACKGROUND)
+label_language.create_text(400, 153,text="Name", font=FONT)
 label_language.grid(row=0, column=1, columnspan=3)
 
-# label = Canvas()
-# label.create_text( text="Hello", font=FONT)
-# label.grid(row=0, column=1, columnspan=3)
+label_word = Canvas()
+label_word.create_text( text="Hello", font=FONT)
+label_word.grid(row=0, column=1, columnspan=3)
 
 window.mainloop()
