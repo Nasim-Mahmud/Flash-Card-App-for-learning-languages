@@ -4,6 +4,8 @@ BACKGROUND_COLOR = "#B1DDC6"
 WHITE_BACKGROUND = "#FFFFFF"
 LANG_FONT = ("Ariel", 30, "italic")
 WORD_FONT = ("Ariel", 50, "bold")
+
+
 # --------------------------------------UI----------------------------------
 
 window = Tk()
