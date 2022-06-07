@@ -6,7 +6,6 @@ LANG_FONT = ("Ariel", 30, "italic")
 WORD_FONT = ("Ariel", 50, "bold")
 # --------------------------------------UI----------------------------------
 
-
 window = Tk()
 window.title("Flash Card")
 window.config(bg=BACKGROUND_COLOR)
