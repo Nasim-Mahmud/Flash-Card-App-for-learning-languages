@@ -23,8 +23,6 @@ def random_word():
     canvas.itemconfig(card_title, text="French")
     canvas.itemconfig(card_word, text=card_text["French"])
 
-
-# random_word()
 # --------------------------------------UI----------------------------------
 
 window = Tk()
