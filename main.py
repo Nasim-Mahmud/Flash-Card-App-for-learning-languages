@@ -12,8 +12,8 @@ WORD_FONT = ("Ariel", 50, "bold")
 # --------------------------------ACCESSING DATASET------------------------
 def random_word():
     data = pandas.read_csv("./data/french_words.csv")
-
-
+    return random.choice(data.French)
+# random_word()
 # --------------------------------------UI----------------------------------
 
 window = Tk()
@@ -24,7 +24,7 @@ canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR
 card_image = PhotoImage(file="./images/card_front.png")
 canvas.create_image(400, 263, image=card_image)
 canvas.create_text(400, 150, text="Title", font=LANG_FONT)
-canvas.create_text(400, 263, text="Name", font=WORD_FONT)
+canvas.create_text(400, 263, text=random_word(), font=WORD_FONT)
 canvas.grid(row=0, column=0, columnspan=2)
 
 button_image_1 = PhotoImage(file="./images/wrong.png")
