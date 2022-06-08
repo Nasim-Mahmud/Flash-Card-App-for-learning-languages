@@ -1,4 +1,7 @@
 from tkinter import *
+import random
+import pandas
+
 
 BACKGROUND_COLOR = "#B1DDC6"
 WHITE_BACKGROUND = "#FFFFFF"
@@ -7,6 +10,8 @@ WORD_FONT = ("Ariel", 50, "bold")
 
 
 # --------------------------------ACCESSING DATASET------------------------
+def random_word():
+    data = pandas.read_csv("./data/french_words.csv")
 
 
 # --------------------------------------UI----------------------------------
@@ -18,7 +23,7 @@ window.config(bg=BACKGROUND_COLOR, padx=50, pady=50)
 canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR)
 card_image = PhotoImage(file="./images/card_front.png")
 canvas.create_image(400, 263, image=card_image)
-canvas.create_text(400, 150, text="Title", font=LANG_FONT, )
+canvas.create_text(400, 150, text="Title", font=LANG_FONT)
 canvas.create_text(400, 263, text="Name", font=WORD_FONT)
 canvas.grid(row=0, column=0, columnspan=2)
 
