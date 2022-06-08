@@ -8,12 +8,20 @@ LANG_FONT = ("Ariel", 30, "italic")
 WORD_FONT = ("Ariel", 50, "bold")
 
 # --------------------------------ACCESSING DATASET------------------------
+# data = pandas.read_csv("./data/french_words.csv")
+#
+#
+# def random_word():
+#     canvas.itemconfig(card_title, text="French")
+#     canvas.itemconfig(card_word, text=random.choice(data.French))
 data = pandas.read_csv("./data/french_words.csv")
+to_learn = data.to_dict(orient="records")
 
 
 def random_word():
+    card_text = random.choice(to_learn)
     canvas.itemconfig(card_title, text="French")
-    canvas.itemconfig(card_word, text=random.choice(data.French))
+    canvas.itemconfig(card_word, text=card_text["French"])
 
 
 # random_word()
