@@ -7,9 +7,9 @@ WHITE_BACKGROUND = "#FFFFFF"
 LANG_FONT = ("Ariel", 30, "italic")
 WORD_FONT = ("Ariel", 50, "bold")
 
-
 # --------------------------------ACCESSING DATASET------------------------
 data = pandas.read_csv("./data/french_words.csv")
+
 
 def random_word():
     canvas.itemconfig(card_title, text="French")
