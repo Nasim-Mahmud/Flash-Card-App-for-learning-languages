@@ -45,4 +45,6 @@ button_image_2 = PhotoImage(file="./images/right.png")
 right_button = Button(image=button_image_2, highlightthickness=0, command=random_word)
 right_button.grid(row=1, column=1, padx=50)
 
+
+random_word()
 window.mainloop()
