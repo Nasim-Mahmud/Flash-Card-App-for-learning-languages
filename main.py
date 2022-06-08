@@ -28,11 +28,11 @@ canvas.create_text(400, 263, text=random_word(), font=WORD_FONT)
 canvas.grid(row=0, column=0, columnspan=2)
 
 button_image_1 = PhotoImage(file="./images/wrong.png")
-button = Button(image=button_image_1, highlightthickness=0)
+button = Button(image=button_image_1, highlightthickness=0, command=random_word)
 button.grid(row=1, column=0)
 
 button_image_2 = PhotoImage(file="./images/right.png")
-button = Button(image=button_image_2, highlightthickness=0)
+button = Button(image=button_image_2, highlightthickness=0, command=random_word)
 button.grid(row=1, column=1, padx=50)
 
 window.mainloop()
