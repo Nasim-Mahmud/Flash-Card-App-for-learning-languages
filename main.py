@@ -32,6 +32,7 @@ window.config(bg=BACKGROUND_COLOR, padx=50, pady=50)
 
 canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR)
 card_front_image = PhotoImage(file="./images/card_front.png")
+card_back_image = PhotoImage(file="./images/card_back.png")
 canvas.create_image(400, 263, image=card_front_image)
 card_title = canvas.create_text(400, 150, text="Title", font=LANG_FONT)
 card_word = canvas.create_text(400, 263, text="Name", font=WORD_FONT)
