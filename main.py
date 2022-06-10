@@ -24,6 +24,7 @@ def random_word():
     card_text = random.choice(to_learn)
     canvas.itemconfig(card_title, text="French")
     canvas.itemconfig(card_word, text=card_text["French"])
+    canvas.itemconfig(card_background, image=card_front_image)
 
 
 def flip_card():
