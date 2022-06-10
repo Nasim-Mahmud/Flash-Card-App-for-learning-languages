@@ -39,6 +39,8 @@ def flip_card():
 def known_words():
     to_learn.remove(card_text)
     print(len(to_learn))
+    data = pandas.DataFrame(to_learn)
+    data.to_csv("words_to_learn.csv")
     random_word()
 
 
