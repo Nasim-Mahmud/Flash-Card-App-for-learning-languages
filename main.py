@@ -23,6 +23,7 @@ try:
     data = pandas.read_csv("./data/words_to_learn.csv")
 except FileNotFoundError:
     original_file = pandas.read_csv("./data/french_words.csv")
+    to_learn = original_file.to_dict(orient="records")
 else:
     to_learn = data.to_dict(orient="records")
 
