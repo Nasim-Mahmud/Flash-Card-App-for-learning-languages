@@ -25,6 +25,7 @@ def random_word():
     canvas.itemconfig(card_title, text="French", fill="black")
     canvas.itemconfig(card_word, text=card_text["French"], fill="black")
     canvas.itemconfig(card_background, image=card_front_image)
+    window.after(3000, func=flip_card)
 
 
 def flip_card():
@@ -38,7 +39,7 @@ def flip_card():
 window = Tk()
 window.title("Flash Card")
 window.config(bg=BACKGROUND_COLOR, padx=50, pady=50)
-window.after(3000, func=flip_card)
+
 
 canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR)
 
