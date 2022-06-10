@@ -22,14 +22,14 @@ card_text = {}
 def random_word():
     global card_text
     card_text = random.choice(to_learn)
-    canvas.itemconfig(card_title, text="French")
-    canvas.itemconfig(card_word, text=card_text["French"])
+    canvas.itemconfig(card_title, text="French", fill="black")
+    canvas.itemconfig(card_word, text=card_text["French"], fill="black")
     canvas.itemconfig(card_background, image=card_front_image)
 
 
 def flip_card():
-    canvas.itemconfig(card_title, text="English")
-    canvas.itemconfig(card_word, text=card_text["English"])
+    canvas.itemconfig(card_title, text="English", fill="white")
+    canvas.itemconfig(card_word, text=card_text["English"], fill="white")
     canvas.itemconfig(card_background, image=card_back_image)
 
 
