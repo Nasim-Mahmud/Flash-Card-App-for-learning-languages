@@ -16,13 +16,17 @@ WORD_FONT = ("Ariel", 50, "bold")
 #     canvas.itemconfig(card_word, text=random.choice(data.French))
 data = pandas.read_csv("./data/french_words.csv")
 to_learn = data.to_dict(orient="records")
-
+card_text = {}
 
 def random_word():
     card_text = random.choice(to_learn)
     canvas.itemconfig(card_title, text="French")
     canvas.itemconfig(card_word, text=card_text["French"])
 
+
+def flip_card():
+    canvas.itemconfig(card_title, text="English")
+    canvas.itemconfig(card_word, text=card_text["French"])
     canvas.itemconfig(canvas_image, image=card_back_image)
 
 
@@ -31,6 +35,7 @@ def random_word():
 window = Tk()
 window.title("Flash Card")
 window.config(bg=BACKGROUND_COLOR, padx=50, pady=50)
+window.after(3000, func=flip_card)
 
 canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR)
 
@@ -50,7 +55,6 @@ wrong_button.grid(row=1, column=0)
 button_image_2 = PhotoImage(file="./images/right.png")
 right_button = Button(image=button_image_2, highlightthickness=0, command=random_word)
 right_button.grid(row=1, column=1, padx=50)
-
 
 random_word()
 window.mainloop()
