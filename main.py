@@ -8,6 +8,7 @@ LANG_FONT = ("Ariel", 30, "italic")
 WORD_FONT = ("Ariel", 50, "bold")
 
 # --------------------------------ACCESSING DATASET------------------------
+
 # data = pandas.read_csv("./data/french_words.csv")
 #
 #
@@ -33,6 +34,10 @@ def flip_card():
     canvas.itemconfig(card_title, text="English", fill="white")
     canvas.itemconfig(card_word, text=card_text["English"], fill="white")
     canvas.itemconfig(card_background, image=card_back_image)
+
+# ----------------------CREATING NEW DATASETS BASED ON FEEDBACK-------------
+
+
 
 
 # --------------------------------------UI----------------------------------
