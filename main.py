@@ -27,8 +27,8 @@ def random_word():
 
 def flip_card():
     canvas.itemconfig(card_title, text="English")
-    canvas.itemconfig(card_word, text=card_text["French"])
-    canvas.itemconfig(canvas_image, image=card_back_image)
+    canvas.itemconfig(card_word, text=card_text["English"])
+    # canvas.itemconfig(canvas_image, image=card_back_image)
 
 
 # --------------------------------------UI----------------------------------
