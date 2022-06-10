@@ -18,6 +18,7 @@ data = pandas.read_csv("./data/french_words.csv")
 to_learn = data.to_dict(orient="records")
 card_text = {}
 
+
 def random_word():
     card_text = random.choice(to_learn)
     canvas.itemconfig(card_title, text="French")
