@@ -26,7 +26,6 @@ else:
     to_learn = data.to_dict(orient="records")
 
 
-
 def random_word():
     global card_text, timer
     window.after_cancel(timer)
