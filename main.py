@@ -20,6 +20,7 @@ card_text = {}
 
 
 def random_word():
+    global card_text
     card_text = random.choice(to_learn)
     canvas.itemconfig(card_title, text="French")
     canvas.itemconfig(card_word, text=card_text["French"])
@@ -41,9 +42,9 @@ window.after(3000, func=flip_card)
 canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR)
 
 card_front_image = PhotoImage(file="./images/card_front.png")
-card_back_image = PhotoImage(file="./images/card_back.png")
+# card_back_image = PhotoImage(file="./images/card_back.png")
 canvas.create_image(400, 263, image=card_front_image)
-canvas_image = canvas.create_image(400, 263, image=card_back_image)
+# canvas_image = canvas.create_image(400, 263, image=card_back_image)
 
 card_title = canvas.create_text(400, 150, text="Title", font=LANG_FONT)
 card_word = canvas.create_text(400, 263, text="Name", font=WORD_FONT)
