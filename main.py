@@ -18,6 +18,7 @@ WORD_FONT = ("Ariel", 50, "bold")
 
 card_text = {}
 to_learn = {}
+
 try:
     data = pandas.read_csv("./data/words_to_learn.csv")
 except FileNotFoundError:
