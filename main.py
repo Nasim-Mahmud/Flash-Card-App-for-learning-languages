@@ -36,7 +36,9 @@ def flip_card():
     canvas.itemconfig(card_background, image=card_back_image)
 
 # ----------------------CREATING NEW DATASETS BASED ON FEEDBACK-------------
-
+def known_words():
+    to_learn.remove(card_text)
+    random_word()
 
 
 
