@@ -38,6 +38,7 @@ def flip_card():
 # ----------------------CREATING NEW DATASETS BASED ON FEEDBACK-------------
 def known_words():
     to_learn.remove(card_text)
+    print(len(to_learn))
     random_word()
 
 
@@ -66,7 +67,7 @@ wrong_button = Button(image=button_image_1, highlightthickness=0, command=random
 wrong_button.grid(row=1, column=0)
 
 button_image_2 = PhotoImage(file="./images/right.png")
-right_button = Button(image=button_image_2, highlightthickness=0, command=random_word)
+right_button = Button(image=button_image_2, highlightthickness=0, command=known_words)
 right_button.grid(row=1, column=1, padx=50)
 
 random_word()
