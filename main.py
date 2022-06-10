@@ -16,6 +16,8 @@ WORD_FONT = ("Ariel", 50, "bold")
 #     canvas.itemconfig(card_title, text="French")
 #     canvas.itemconfig(card_word, text=random.choice(data.French))
 
+
+to_learn = {}
 try:
     data = pandas.read_csv("./data/words_to_learn.csv")
 except FileNotFoundError:
