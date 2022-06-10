@@ -18,9 +18,9 @@ WORD_FONT = ("Ariel", 50, "bold")
 
 try:
     data = pandas.read_csv("./data/words_to_learn.csv")
-    to_learn = data.to_dict(orient="records")
-except:
-    data = pandas.read_csv("./data/french_words.csv")
+except FileNotFoundError:
+    original_file = pandas.read_csv("./data/french_words.csv")
+else:
     to_learn = data.to_dict(orient="records")
 card_text = {}
 
