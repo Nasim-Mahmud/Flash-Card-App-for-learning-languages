@@ -35,6 +35,7 @@ def flip_card():
     canvas.itemconfig(card_word, text=card_text["English"], fill="white")
     canvas.itemconfig(card_background, image=card_back_image)
 
+
 # ----------------------CREATING NEW DATASETS BASED ON FEEDBACK-------------
 def known_words():
     to_learn.remove(card_text)
@@ -42,7 +43,6 @@ def known_words():
     data = pandas.DataFrame(to_learn)
     data.to_csv("words_to_learn.csv")
     random_word()
-
 
 
 # --------------------------------------UI----------------------------------
@@ -58,7 +58,6 @@ canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR
 card_front_image = PhotoImage(file="./images/card_front.png")
 card_back_image = PhotoImage(file="./images/card_back.png")
 card_background = canvas.create_image(400, 263, image=card_front_image)
-
 
 card_title = canvas.create_text(400, 150, text="Title", font=LANG_FONT)
 card_word = canvas.create_text(400, 263, text="Name", font=WORD_FONT)
