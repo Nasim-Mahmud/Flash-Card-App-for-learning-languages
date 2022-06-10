@@ -29,7 +29,7 @@ def random_word():
 def flip_card():
     canvas.itemconfig(card_title, text="English")
     canvas.itemconfig(card_word, text=card_text["English"])
-    # canvas.itemconfig(canvas_image, image=card_back_image)
+    canvas.itemconfig(card_background, image=card_back_image)
 
 
 # --------------------------------------UI----------------------------------
@@ -42,9 +42,9 @@ window.after(3000, func=flip_card)
 canvas = Canvas(height=526, width=800, highlightthickness=0, bg=BACKGROUND_COLOR)
 
 card_front_image = PhotoImage(file="./images/card_front.png")
-# card_back_image = PhotoImage(file="./images/card_back.png")
-canvas.create_image(400, 263, image=card_front_image)
-# canvas_image = canvas.create_image(400, 263, image=card_back_image)
+card_back_image = PhotoImage(file="./images/card_back.png")
+card_background = canvas.create_image(400, 263, image=card_front_image)
+
 
 card_title = canvas.create_text(400, 150, text="Title", font=LANG_FONT)
 card_word = canvas.create_text(400, 263, text="Name", font=WORD_FONT)
