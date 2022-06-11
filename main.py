@@ -57,7 +57,7 @@ def known_words():
 
 window = Tk()
 window.title("Flash Card")
-window.config(bg=BACKGROUND_COLOR, padx=50, pady=50)
+window.config(bg=BACKGROUND_COLOR, padx=50, pady=30)
 
 timer = window.after(3000, func=flip_card)
 
